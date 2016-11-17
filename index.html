@@ -56,7 +56,7 @@
 			popupContent += feature.properties.popupContent;
 		}
 
-		layer.bindLabel(popupContent);
+		layer.bindLabel( "Hello World", { direction: 'left' })
 	}
 
 	L.geoJSON([bicycleRental, campus], {
