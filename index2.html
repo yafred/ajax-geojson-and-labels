@@ -57,8 +57,8 @@
 
 	// Load data
 	var request = $.ajax({
-	    url: 'assets/sample.jsonp',
-	    dataType: "jsonp"
+	    url: 'assets/sample.geojson',
+	    dataType: "json"
 	});
 	
 	request.fail(function( jqXHR, textStatus, errorThrown) {
@@ -66,14 +66,11 @@
 	});
 	
 	request.success(function( data, textStatus, jqXHR ) {
-		console.log( "Request succeeded: " + data);
+		//console.log( "Request succeeded: " + data);
+		 pointLayer.addData(data);
 	});
 
-	function processGeoJson(data) {
-	    pointLayer.addData(data);
 
-	}
-	
 
 </script>
 
